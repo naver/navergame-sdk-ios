@@ -7,27 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E70ED6B925FA33E600847DB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E70ED6B825FA33E600847DB2 /* AppDelegate.m */; };
-		E70ED6BF25FA33E600847DB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E70ED6BE25FA33E600847DB2 /* ViewController.m */; };
 		E70ED6C425FA33EA00847DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C325FA33EA00847DB2 /* Assets.xcassets */; };
 		E70ED6C725FA33EA00847DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C525FA33EA00847DB2 /* LaunchScreen.storyboard */; };
 		E70ED6CA25FA33EA00847DB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E70ED6C925FA33EA00847DB2 /* main.m */; };
 		E70ED6D625FA34B000847DB2 /* NNGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70ED6D425FA34B000847DB2 /* NNGSDK.framework */; };
 		E70ED6D725FA34B000847DB2 /* NNGSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */; };
+		E7FF30FE2678C16E0097E90A /* NGSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30F42678C16E0097E90A /* NGSCell.m */; };
+		E7FF30FF2678C16E0097E90A /* NGSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30F82678C16E0097E90A /* NGSViewController.m */; };
+		E7FF31002678C16E0097E90A /* NGSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30FB2678C16E0097E90A /* NGSAppDelegate.m */; };
+		E7FF31012678C16E0097E90A /* NGSUserCache.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30FC2678C16E0097E90A /* NGSUserCache.m */; };
+		E7FF31022678C16E0097E90A /* NGSCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30FD2678C16E0097E90A /* NGSCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E70ED6B425FA33E600847DB2 /* NNGSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNGSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E70ED6B725FA33E600847DB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E70ED6B825FA33E600847DB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E70ED6BD25FA33E600847DB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E70ED6BE25FA33E600847DB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E70ED6C325FA33EA00847DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E70ED6C625FA33EA00847DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E70ED6C825FA33EA00847DB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E70ED6C925FA33EA00847DB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E70ED6D425FA34B000847DB2 /* NNGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NNGSDK.framework; sourceTree = "<group>"; };
 		E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NNGSDK.bundle; sourceTree = "<group>"; };
+		E7FF30F42678C16E0097E90A /* NGSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSCell.m; sourceTree = "<group>"; };
+		E7FF30F52678C16E0097E90A /* NGSCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSCellModel.h; sourceTree = "<group>"; };
+		E7FF30F62678C16E0097E90A /* NGSUserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSUserCache.h; sourceTree = "<group>"; };
+		E7FF30F72678C16E0097E90A /* NGSViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSViewController.h; sourceTree = "<group>"; };
+		E7FF30F82678C16E0097E90A /* NGSViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSViewController.m; sourceTree = "<group>"; };
+		E7FF30F92678C16E0097E90A /* NGSCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSCell.h; sourceTree = "<group>"; };
+		E7FF30FA2678C16E0097E90A /* NGSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSAppDelegate.h; sourceTree = "<group>"; };
+		E7FF30FB2678C16E0097E90A /* NGSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSAppDelegate.m; sourceTree = "<group>"; };
+		E7FF30FC2678C16E0097E90A /* NGSUserCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSUserCache.m; sourceTree = "<group>"; };
+		E7FF30FD2678C16E0097E90A /* NGSCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +71,16 @@
 			isa = PBXGroup;
 			children = (
 				E70ED6D325FA34B000847DB2 /* Libraries */,
-				E70ED6B725FA33E600847DB2 /* AppDelegate.h */,
-				E70ED6B825FA33E600847DB2 /* AppDelegate.m */,
-				E70ED6BD25FA33E600847DB2 /* ViewController.h */,
-				E70ED6BE25FA33E600847DB2 /* ViewController.m */,
+				E7FF30FA2678C16E0097E90A /* NGSAppDelegate.h */,
+				E7FF30FB2678C16E0097E90A /* NGSAppDelegate.m */,
+				E7FF30F92678C16E0097E90A /* NGSCell.h */,
+				E7FF30F42678C16E0097E90A /* NGSCell.m */,
+				E7FF30F52678C16E0097E90A /* NGSCellModel.h */,
+				E7FF30FD2678C16E0097E90A /* NGSCellModel.m */,
+				E7FF30F62678C16E0097E90A /* NGSUserCache.h */,
+				E7FF30FC2678C16E0097E90A /* NGSUserCache.m */,
+				E7FF30F72678C16E0097E90A /* NGSViewController.h */,
+				E7FF30F82678C16E0097E90A /* NGSViewController.m */,
 				E70ED6C325FA33EA00847DB2 /* Assets.xcassets */,
 				E70ED6C525FA33EA00847DB2 /* LaunchScreen.storyboard */,
 				E70ED6C825FA33EA00847DB2 /* Info.plist */,
@@ -152,9 +167,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70ED6BF25FA33E600847DB2 /* ViewController.m in Sources */,
-				E70ED6B925FA33E600847DB2 /* AppDelegate.m in Sources */,
+				E7FF30FE2678C16E0097E90A /* NGSCell.m in Sources */,
+				E7FF30FF2678C16E0097E90A /* NGSViewController.m in Sources */,
 				E70ED6CA25FA33EA00847DB2 /* main.m in Sources */,
+				E7FF31002678C16E0097E90A /* NGSAppDelegate.m in Sources */,
+				E7FF31022678C16E0097E90A /* NGSCellModel.m in Sources */,
+				E7FF31012678C16E0097E90A /* NGSUserCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
