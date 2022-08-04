@@ -7,8 +7,9 @@
 
 
 #import <UIKit/UIKit.h>
+#import <NNGSDK/NNGSDKManager.h>
 
 
-@interface NGSViewController : UIViewController
+@interface NGSViewController : UIViewController <NNGSDKDelegate>
 
 @end

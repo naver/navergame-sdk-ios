@@ -16,5 +16,6 @@
 @property (nonatomic) NSNumber *boardId;
 @property (nonatomic) NSNumber *feedId;
 @property (nonatomic) NSNumber *temporaryFeedId;
+@property (nonatomic) NSNumber *boardIdForFeedWriting;
 
 @end

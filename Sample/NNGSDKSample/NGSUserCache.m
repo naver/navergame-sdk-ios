@@ -12,6 +12,7 @@
 #define NGSUserCacheBoardIdKey @"NGSUserCacheBoardId"
 #define NGSUserCacheFeedIdKey @"NGSUserCacheFeedId"
 #define NGSUserCacheTemporaryFeedIdKey @"NGSUserCacheTemporaryFeedId"
+#define NGSUserCacheBoardIdForFeedWritingKey @"NGSUserCacheBoardIdForFeedWriting"
 
 
 @interface NGSUserCache ()
@@ -86,6 +87,16 @@
 
 - (void)setTemporaryFeedId:(NSNumber *)temporaryFeedId {
     [self setObject:temporaryFeedId for:NGSUserCacheTemporaryFeedIdKey];
+}
+
+
+- (NSNumber *)boardIdForFeedWriting {
+    return [self objectFor:NGSUserCacheBoardIdForFeedWritingKey];
+}
+
+
+- (void)setBoardIdForFeedWriting:(NSNumber *)boardId {
+    [self setObject:boardId for:NGSUserCacheBoardIdForFeedWritingKey];
 }
 
 @end

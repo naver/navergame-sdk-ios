@@ -7,6 +7,7 @@
 
 
 #import "NGSAppDelegate.h"
+#import <NNGSDK/NNGSDKManager.h>
 #import "NGSViewController.h"
 
 
@@ -14,8 +15,8 @@
 
 @end
 
-@implementation NGSAppDelegate
 
+@implementation NGSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
@@ -24,6 +25,11 @@
     [window makeKeyAndVisible];
     self.window = window;
     return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options {
+    return [NNGSDKManager.shared handleCallbackUrl:url];
 }
 
 @end

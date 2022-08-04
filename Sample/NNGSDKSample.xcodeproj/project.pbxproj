@@ -10,8 +10,10 @@
 		E70ED6C425FA33EA00847DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C325FA33EA00847DB2 /* Assets.xcassets */; };
 		E70ED6C725FA33EA00847DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C525FA33EA00847DB2 /* LaunchScreen.storyboard */; };
 		E70ED6CA25FA33EA00847DB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E70ED6C925FA33EA00847DB2 /* main.m */; };
-		E70ED6D625FA34B000847DB2 /* NNGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70ED6D425FA34B000847DB2 /* NNGSDK.framework */; };
-		E70ED6D725FA34B000847DB2 /* NNGSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */; };
+		E740B1A12893A84C00E8C228 /* NNGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70ED6D425FA34B000847DB2 /* NNGSDK.framework */; };
+		E740B1A42893A85700E8C228 /* NaverLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E740B19C2893A83000E8C228 /* NaverLogin.framework */; };
+		E740B1A72893A85D00E8C228 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E740B1A62893A85D00E8C228 /* SafariServices.framework */; };
+		E740B1A92893A87400E8C228 /* NNGSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */; };
 		E7FF30FE2678C16E0097E90A /* NGSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30F42678C16E0097E90A /* NGSCell.m */; };
 		E7FF30FF2678C16E0097E90A /* NGSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30F82678C16E0097E90A /* NGSViewController.m */; };
 		E7FF31002678C16E0097E90A /* NGSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30FB2678C16E0097E90A /* NGSAppDelegate.m */; };
@@ -27,6 +29,8 @@
 		E70ED6C925FA33EA00847DB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E70ED6D425FA34B000847DB2 /* NNGSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NNGSDK.framework; sourceTree = "<group>"; };
 		E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NNGSDK.bundle; sourceTree = "<group>"; };
+		E740B19C2893A83000E8C228 /* NaverLogin.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NaverLogin.framework; sourceTree = "<group>"; };
+		E740B1A62893A85D00E8C228 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		E7FF30F42678C16E0097E90A /* NGSCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGSCell.m; sourceTree = "<group>"; };
 		E7FF30F52678C16E0097E90A /* NGSCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSCellModel.h; sourceTree = "<group>"; };
 		E7FF30F62678C16E0097E90A /* NGSUserCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGSUserCache.h; sourceTree = "<group>"; };
@@ -44,7 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70ED6D625FA34B000847DB2 /* NNGSDK.framework in Frameworks */,
+				E740B1A12893A84C00E8C228 /* NNGSDK.framework in Frameworks */,
+				E740B1A42893A85700E8C228 /* NaverLogin.framework in Frameworks */,
+				E740B1A72893A85D00E8C228 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +62,7 @@
 			children = (
 				E70ED6B625FA33E600847DB2 /* NNGSDKSample */,
 				E70ED6B525FA33E600847DB2 /* Products */,
+				E740B1A02893A84C00E8C228 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,10 +99,35 @@
 		E70ED6D325FA34B000847DB2 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				E740B1982893A7C000E8C228 /* NNGSDK */,
+				E740B19A2893A80900E8C228 /* NaverLogin-4.1.1 */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		E740B1982893A7C000E8C228 /* NNGSDK */ = {
+			isa = PBXGroup;
+			children = (
 				E70ED6D425FA34B000847DB2 /* NNGSDK.framework */,
 				E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */,
 			);
-			path = Libraries;
+			path = NNGSDK;
+			sourceTree = "<group>";
+		};
+		E740B19A2893A80900E8C228 /* NaverLogin-4.1.1 */ = {
+			isa = PBXGroup;
+			children = (
+				E740B19C2893A83000E8C228 /* NaverLogin.framework */,
+			);
+			path = "NaverLogin-4.1.1";
+			sourceTree = "<group>";
+		};
+		E740B1A02893A84C00E8C228 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E740B1A62893A85D00E8C228 /* SafariServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,9 +186,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E740B1A92893A87400E8C228 /* NNGSDK.bundle in Resources */,
 				E70ED6C725FA33EA00847DB2 /* LaunchScreen.storyboard in Resources */,
 				E70ED6C425FA33EA00847DB2 /* Assets.xcassets in Resources */,
-				E70ED6D725FA34B000847DB2 /* NNGSDK.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,10 +341,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GST65JV9LK;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NNGSDKSample/Libraries",
+					"$(PROJECT_DIR)/NNGSDKSample/Libraries/NaverLogin-4.1.1",
+					"$(PROJECT_DIR)/NNGSDKSample/Libraries/NNGSDK",
 				);
 				INFOPLIST_FILE = NNGSDKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -338,10 +372,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = GST65JV9LK;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NNGSDKSample/Libraries",
+					"$(PROJECT_DIR)/NNGSDKSample/Libraries/NaverLogin-4.1.1",
+					"$(PROJECT_DIR)/NNGSDKSample/Libraries/NNGSDK",
 				);
 				INFOPLIST_FILE = NNGSDKSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

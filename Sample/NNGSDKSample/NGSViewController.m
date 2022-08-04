@@ -16,7 +16,7 @@
 #define NGSCellIdentifier @"NGSCell"
 
 
-@interface NGSViewController () <UITableViewDataSource, UITableViewDelegate, NNGSDKDelegate>
+@interface NGSViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) NSArray<NGSCellModel *> *items;
 
@@ -54,7 +54,7 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a board ID" message:nil preferredStyle:UIAlertControllerStyleAlert];
             alert.popoverPresentationController.sourceView = weakSelf.view;
             [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                textField.placeholder = @"Board ID";
+                textField.placeholder = @"Board ID (Optional)";
                 
                 NSNumber *boardId = NGSUserCache.shared.boardId;
                 
@@ -80,7 +80,7 @@
             UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a feed ID" message:nil preferredStyle:UIAlertControllerStyleAlert];
             alert.popoverPresentationController.sourceView = weakSelf.view;
             [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                textField.placeholder = @"Feed ID";
+                textField.placeholder = @"Feed ID (Required)";
                 
                 NSNumber *feedId = NGSUserCache.shared.feedId;
                 
@@ -102,11 +102,11 @@
             [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
             [weakSelf presentViewController:alert animated:YES completion:nil];
         }],
-        [NGSCellModel itemWithTitle:@"Temporary Feed" value:NGSUserCache.shared.temporaryFeedId action:^{
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a temporary feed ID" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        [NGSCellModel itemWithTitle:@"Scheduled Feed" value:NGSUserCache.shared.temporaryFeedId action:^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a scheduled feed ID" message:nil preferredStyle:UIAlertControllerStyleAlert];
             alert.popoverPresentationController.sourceView = weakSelf.view;
             [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                textField.placeholder = @"Temporary Feed ID";
+                textField.placeholder = @"Scheduled Feed ID (Required)";
                 
                 NSNumber *feedId = NGSUserCache.shared.temporaryFeedId;
                 
@@ -127,6 +127,69 @@
             }]];
             [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
             [weakSelf presentViewController:alert animated:YES completion:nil];
+        }],
+        [NGSCellModel itemWithTitle:@"Feed Writing" value:NGSUserCache.shared.boardIdForFeedWriting action:^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Preset informations for the feed" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            alert.popoverPresentationController.sourceView = weakSelf.view;
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Board ID (Optional)";
+                
+                NSNumber *boardId = NGSUserCache.shared.boardIdForFeedWriting;
+                
+                if (boardId != nil) {
+                    textField.text = [NSString stringWithFormat:@"%@", boardId];
+                }
+            }];
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Title (Optional)";
+            }];
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Text (Optional)";
+            }];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSNumber *boardId;
+                NSString *title;
+                NSString *text;
+                
+                if (alert.textFields.count > 0) {
+                    NSString *boardIdString = [[alert.textFields[0].text componentsSeparatedByCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet] componentsJoinedByString:@""];
+                    
+                    if (boardIdString != nil) {
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        boardId = [formatter numberFromString:boardIdString];
+                    }
+                }
+                
+                if (alert.textFields.count > 1) {
+                    title = [alert.textFields[1].text stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
+                }
+                
+                if (alert.textFields.count > 2) {
+                    text = [alert.textFields[2].text stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
+                }
+                
+                NGSUserCache.shared.boardIdForFeedWriting = boardId;
+                [NNGSDKManager.shared presentFeedWritingWithBoardId:boardId title:title text:text imageFilePath:nil];
+                [weakSelf refreshItems];
+                [weakSelf.table reloadData];
+            }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
+        }],
+        [NGSCellModel itemWithTitle:@"Register Game ID" value:nil action:^{
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Enter a game ID" message:nil preferredStyle:UIAlertControllerStyleAlert];
+            alert.popoverPresentationController.sourceView = weakSelf.view;
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                textField.placeholder = @"Game ID (Required)";
+            }];
+            [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                NSString *gameId = [alert.textFields.firstObject.text stringByTrimmingCharactersInSet:NSCharacterSet.whitespaceAndNewlineCharacterSet];
+                [NNGSDKManager.shared registerMemberGameId:gameId];
+            }]];
+            [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+            [weakSelf presentViewController:alert animated:YES completion:nil];
+            
+            
         }],
         [NGSCellModel itemWithTitle:@"Country Code" value:NNGSDKManager.shared.countryCode action:nil]
     ];
@@ -152,7 +215,7 @@
         UITableView *table = [[UITableView alloc] init];
         table.translatesAutoresizingMaskIntoConstraints = NO;
         table.rowHeight = 50;
-        [table registerClass:[NGSCell class] forCellReuseIdentifier:NGSCellIdentifier];
+        [table registerClass:NGSCell.self forCellReuseIdentifier:NGSCellIdentifier];
         table.dataSource = self;
         table.delegate = self;
         
