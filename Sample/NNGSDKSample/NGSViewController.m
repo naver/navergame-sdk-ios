@@ -191,7 +191,11 @@
             
             
         }],
-        [NGSCellModel itemWithTitle:@"Country Code" value:NNGSDKManager.shared.countryCode action:nil]
+        [NGSCellModel itemWithTitle:@"Country Code" value:NNGSDKManager.shared.countryCode action:nil],
+        
+        [NGSCellModel itemWithTitle:@"Naver Logout" value:nil action:^{
+            [NNGSDKManager.shared logout];
+        }]
     ];
 }
 

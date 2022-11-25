@@ -27,7 +27,7 @@
 			<string>com.navercorp.nngsdk.nng-sdk-sample</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>nng-sdk-sample</string>
+				<string>nngsdksample</string>
 			</array>
 		</dict>
 	</array>
@@ -55,6 +55,7 @@
 	<array>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UISupportedInterfaceOrientations~ipad</key>
 	<array>
