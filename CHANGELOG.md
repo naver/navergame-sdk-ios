@@ -1,3 +1,9 @@
+v1.3.5
+-------------
+### updated
+1. 네이버 3rd Party 로그인 버전 업(.xcframework) 
+2. privacy manifest 대응
+ 
 v1.3.4
 -------------
 ### updated

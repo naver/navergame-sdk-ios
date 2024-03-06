@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2619872B8F462B0077D497 /* NaverThirdPartyLogin.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2619862B8F462B0077D497 /* NaverThirdPartyLogin.xcframework */; };
+		CE2619882B8F462B0077D497 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CE2619862B8F462B0077D497 /* NaverThirdPartyLogin.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E70ED6C425FA33EA00847DB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C325FA33EA00847DB2 /* Assets.xcassets */; };
 		E70ED6C725FA33EA00847DB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6C525FA33EA00847DB2 /* LaunchScreen.storyboard */; };
 		E70ED6CA25FA33EA00847DB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E70ED6C925FA33EA00847DB2 /* main.m */; };
 		E740B1A12893A84C00E8C228 /* NNGSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E70ED6D425FA34B000847DB2 /* NNGSDK.framework */; };
-		E740B1A42893A85700E8C228 /* NaverLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E740B19C2893A83000E8C228 /* NaverLogin.framework */; };
 		E740B1A72893A85D00E8C228 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E740B1A62893A85D00E8C228 /* SafariServices.framework */; };
 		E740B1A92893A87400E8C228 /* NNGSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E70ED6D525FA34B000847DB2 /* NNGSDK.bundle */; };
 		E7FF30FE2678C16E0097E90A /* NGSCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30F42678C16E0097E90A /* NGSCell.m */; };
@@ -21,7 +22,22 @@
 		E7FF31022678C16E0097E90A /* NGSCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FF30FD2678C16E0097E90A /* NGSCellModel.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CE2619892B8F462B0077D497 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CE2619882B8F462B0077D497 /* NaverThirdPartyLogin.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CE2619862B8F462B0077D497 /* NaverThirdPartyLogin.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:U6VV7FMD97:NHN Corporation"; lastKnownFileType = wrapper.xcframework; name = NaverThirdPartyLogin.xcframework; path = "NNGSDKSample/Libraries/NaverLogin-4.2.1/NaverThirdPartyLogin.xcframework"; sourceTree = "<group>"; };
 		E70ED6B425FA33E600847DB2 /* NNGSDKSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NNGSDKSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E70ED6C325FA33EA00847DB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E70ED6C625FA33EA00847DB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,8 +65,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E740B1A12893A84C00E8C228 /* NNGSDK.framework in Frameworks */,
-				E740B1A42893A85700E8C228 /* NaverLogin.framework in Frameworks */,
 				E740B1A72893A85D00E8C228 /* SafariServices.framework in Frameworks */,
+				CE2619872B8F462B0077D497 /* NaverThirdPartyLogin.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +141,7 @@
 		E740B1A02893A84C00E8C228 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CE2619862B8F462B0077D497 /* NaverThirdPartyLogin.xcframework */,
 				E740B1A62893A85D00E8C228 /* SafariServices.framework */,
 			);
 			name = Frameworks;
@@ -140,6 +157,7 @@
 				E70ED6B025FA33E600847DB2 /* Sources */,
 				E70ED6B125FA33E600847DB2 /* Frameworks */,
 				E70ED6B225FA33E600847DB2 /* Resources */,
+				CE2619892B8F462B0077D497 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

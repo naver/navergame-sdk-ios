@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		6PyG/Sn5jh81qqGDYJ701GSxHBw=
+		</data>
 		<key>TimeZoneToCountryCode.plist</key>
 		<data>
 		k8h8YLTxULf/+EOEMvV0f7vlxeY=
@@ -101,6 +105,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6PyG/Sn5jh81qqGDYJ701GSxHBw=
+			</data>
+			<key>hash2</key>
+			<data>
+			3I1+H5p9p/M4HzB0a1kgbuYs4iW2n+O8u2YjT4RZvjU=
+			</data>
+		</dict>
 		<key>TimeZoneToCountryCode.plist</key>
 		<dict>
 			<key>hash</key>
