@@ -1,3 +1,9 @@
+v1.3.8
+-------------
+### updated
+1. deprecated된 UIGraphics API 교체
+
+
 v1.3.6
 -------------
 ### updated
