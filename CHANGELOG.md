@@ -1,3 +1,10 @@
+v1.3.12
+-------------
+### updated
+1. 네아로 SDK iOS v4.2.3 버전 업
+2. iOS 18 / Xcode 16 deprecated 이슈 수정
+3. 샘플 코드에 SceneDelegate 기반 코드 반영
+
 v1.3.8
 -------------
 ### updated

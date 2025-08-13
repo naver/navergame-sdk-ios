@@ -11,20 +11,24 @@
 #import "NGSViewController.h"
 
 
-@interface NGSAppDelegate ()
-
-@end
-
-
 @implementation NGSAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    window.backgroundColor = UIColor.whiteColor;
-    [window setRootViewController:[[NGSViewController alloc] initWithNibName:nil bundle:nil]];
-    [window makeKeyAndVisible];
-    self.window = window;
+    if (@available(iOS 13.0, *)) {
+        
+    } else {
+        UIWindow *window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
+        window.backgroundColor = UIColor.whiteColor;
+        [window setRootViewController:[[NGSViewController alloc] initWithNibName:nil bundle:nil]];
+        [window makeKeyAndVisible];
+        self.window = window;
+    }
     return YES;
+}
+
+
+- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options  API_AVAILABLE(ios(13.0)){
+    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
 }
 
 
